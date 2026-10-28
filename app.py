@@ -1515,54 +1515,79 @@ def generate_multi_final_report(student_name, registration_number, molecule_reco
             except Exception:
                 pass
 
-
 # ============================================================
-# SIDEBAR
+# FUTURISTIC LAB SIDEBAR
 # ============================================================
 
-st.sidebar.title("🧪 Virtual Lab")
+st.sidebar.markdown("""
+<div style="
+    padding: 20px 12px;
+    background: linear-gradient(135deg, #12344a, #0b1726);
+    border: 1px solid #155e75;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+">
+    <div style="font-size: 38px;">⚛️</div>
+    <h2 style="
+        color: #67e8f9;
+        font-size: 22px;
+        margin: 8px 0;
+    ">MOLECULAR LAB</h2>
+    <p style="
+        color: #94a3b8;
+        font-size: 11px;
+        letter-spacing: 2px;
+        margin: 0;
+    ">SCIENTIFIC WORKSPACE</p>
+</div>
+""", unsafe_allow_html=True)
+
+st.sidebar.markdown("#### 🧭 LAB NAVIGATION")
 
 page = st.sidebar.radio(
-
-    "Navigation",
-
+    "Select a workspace",
     [
-
         "🏠 Home",
-
         "📖 Theory",
-
         "🧬 Molecular Visualization",
-
         "📊 Molecular Properties Report",
-
         "📈 Structure–Property Analysis",
-
         "📝 Assessment",
-
         "📄 Final Project Report"
-
-    ]
+    ],
+    key="main_navigation"
 )
 
 st.sidebar.divider()
 
-st.sidebar.markdown("### 👩‍🎓 Student Information")
-student_name = st.sidebar.text_input("Student Name", key="student_name")
-registration_number = st.sidebar.text_input("Registration Number", key="registration_number")
+st.sidebar.markdown("#### 👨‍🎓 RESEARCHER PROFILE")
 
-st.sidebar.markdown("""
-### 🎓 Learning Objectives
+student_name = st.sidebar.text_input(
+    "Student Name",
+    key="student_name"
+)
 
-Students can learn:
+registration_number = st.sidebar.text_input(
+    "Registration Number",
+    key="registration_number"
+)
 
-- SMILES notation
-- Molecular representation
-- 2D visualization
-- 3D visualization
-- Molecular descriptors
-- Structure-property relationships
-""")
+st.sidebar.divider()
+
+with st.sidebar.expander("🎯 Learning Objectives"):
+    st.markdown("""
+    **Skills you'll explore**
+
+    - 🧪 SMILES notation
+    - ⚛️ Molecular representation
+    - 🔬 2D visualization
+    - 🧬 3D visualization
+    - 📊 Molecular descriptors
+    - 📈 Structure–property relationships
+    """)
+
+st.sidebar.caption("MOLECULAR LAB • VERSION 2.0")
 
 
 # ============================================================
