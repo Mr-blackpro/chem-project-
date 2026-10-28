@@ -1705,9 +1705,7 @@ if page == "🏠 Home":
     st.markdown("SRM Institute of Science and Technology, Tiruchirappalli")
     st.markdown("## SOURCE TAKEN FROM ")
     st.markdown("Dr. R. Subramanian  ")
-    st.markdown("Assistant Professor
-                 Division of Chemistry, School of Sciences
-                 Faculty of Engineering and Technology")
+    st.markdown("Assistant Professor, Division of Chemistry")
     st.info("📧 **For queries, contact:** pranav,sp2008@gmail.com")
 
 
