@@ -2833,4 +2833,3 @@ st.markdown("---")
 st.caption(
     "MOLECULAR LAB  |  A computational chemistry workspace"
 )
-```
