@@ -2590,3 +2590,157 @@ else:
             "The molecular formulas differ. These molecules "
             "are not structural isomers of each other."
         )
+# ============================================================
+# FUTURISTIC MOLECULAR LAB - WEBSITE REDESIGN
+# ============================================================
+
+st.markdown("""
+<style>
+
+/* Main website background */
+.stApp {
+    background:
+        radial-gradient(
+            circle at 10% 0%,
+            #123047 0%,
+            #091522 40%,
+            #060b13 100%
+        );
+    color: #e8f4ff;
+}
+
+/* Main content spacing */
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    max-width: 1250px;
+}
+
+/* Main headings */
+h1, h2, h3 {
+    color: #67e8f9 !important;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Normal text */
+p, label, .stMarkdown {
+    color: #d6e6f5;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background: linear-gradient(
+        180deg,
+        #101e30 0%,
+        #07111d 100%
+    );
+    border-right: 1px solid #164e63;
+}
+
+/* Content containers and cards */
+[data-testid="stVerticalBlockBorderWrapper"] {
+    background: rgba(15, 32, 49, 0.72);
+    border: 1px solid rgba(103, 232, 249, 0.22);
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(
+        135deg,
+        #0891b2,
+        #0e7490
+    );
+    color: white;
+    border: 1px solid #67e8f9;
+    border-radius: 10px;
+    padding: 0.55rem 1.2rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+/* Button hover effect */
+.stButton > button:hover {
+    background: linear-gradient(
+        135deg,
+        #06b6d4,
+        #0891b2
+    );
+    color: white;
+    border-color: #a5f3fc;
+    box-shadow: 0 0 18px rgba(34, 211, 238, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Text input fields */
+.stTextInput input,
+.stTextArea textarea,
+.stNumberInput input {
+    background-color: #101e30 !important;
+    color: #e0f7ff !important;
+    border: 1px solid #24516b !important;
+    border-radius: 9px !important;
+}
+
+/* Select boxes */
+.stSelectbox div[data-baseweb="select"] > div {
+    background-color: #101e30;
+    border-color: #24516b;
+    border-radius: 9px;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+    border-bottom: 1px solid #164e63;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: #101e30;
+    border-radius: 8px 8px 0 0;
+    color: #cbd5e1;
+    padding: 10px 18px;
+}
+
+.stTabs [aria-selected="true"] {
+    color: #67e8f9 !important;
+    border-bottom: 2px solid #22d3ee;
+}
+
+/* Data tables */
+[data-testid="stDataFrame"] {
+    border: 1px solid #164e63;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Horizontal separators */
+hr {
+    border-color: rgba(103, 232, 249, 0.25);
+}
+
+/* Success messages */
+[data-testid="stAlert"] {
+    border-radius: 12px;
+}
+
+/* Images and molecule visualizations */
+[data-testid="stImage"] img {
+    border-radius: 12px;
+}
+
+/* Footer */
+[data-testid="stCaptionContainer"] {
+    color: #8ba8bd;
+}
+
+/* Remove unnecessary top decoration */
+[data-testid="stHeader"] {
+    background: transparent;
+}
+
+</style>
+""", unsafe_allow_html=True)
