@@ -2744,3 +2744,94 @@ hr {
 
 </style>
 """, unsafe_allow_html=True)
+```python
+# ============================================================
+# FUTURISTIC MOLECULAR LAB - HOME PAGE
+# ============================================================
+
+st.markdown("""
+<div style="
+    padding: 35px 30px;
+    border-radius: 20px;
+    background: linear-gradient(120deg, #102a43, #0b1726, #123b50);
+    border: 1px solid rgba(103,232,249,0.4);
+    margin-bottom: 25px;
+">
+    <p style="
+        color: #67e8f9;
+        font-size: 13px;
+        letter-spacing: 4px;
+        font-weight: bold;
+    ">CHEMISTRY • COMPUTING • DISCOVERY</p>
+
+    <h1 style="
+        color: #f0f9ff;
+        font-size: 42px;
+        margin-bottom: 10px;
+    ">MOLECULAR LAB</h1>
+
+    <p style="
+        color: #cbd5e1;
+        font-size: 17px;
+    ">
+        Explore molecular structures, investigate chemical
+        properties, and discover the science of isomers.
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("### Explore Your Laboratory")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("""
+    <div style="
+        background: #102033;
+        border: 1px solid #155e75;
+        border-radius: 15px;
+        padding: 20px;
+        min-height: 155px;
+    ">
+        <h2>⚛️</h2>
+        <h3>Molecule Explorer</h3>
+        <p>Investigate molecular structures and representations.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown("""
+    <div style="
+        background: #102033;
+        border: 1px solid #155e75;
+        border-radius: 15px;
+        padding: 20px;
+        min-height: 155px;
+    ">
+        <h2>📊</h2>
+        <h3>Property Analysis</h3>
+        <p>Study molecular formulas and chemical descriptors.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col3:
+    st.markdown("""
+    <div style="
+        background: #102033;
+        border: 1px solid #155e75;
+        border-radius: 15px;
+        padding: 20px;
+        min-height: 155px;
+    ">
+        <h2>🧬</h2>
+        <h3>Isomer Explorer</h3>
+        <p>Compare molecules and investigate structural isomerism.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+st.markdown("---")
+
+st.caption(
+    "MOLECULAR LAB  |  A computational chemistry workspace"
+)
+```
