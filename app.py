@@ -45,8 +45,8 @@ import os
 # ============================================================
 
 st.set_page_config(
-    page_title="Cheminformatics Virtual Laboratory",
-    page_icon="🧪",
+    page_title="Molecular Lab | Advanced Chemistry Explorer",
+    page_icon="⚛️",
     layout="wide"
 )
 
