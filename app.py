@@ -2509,3 +2509,84 @@ st.caption(
     "🧪 Cheminformatics Virtual Laboratory | "
     "Developed using Python, Streamlit and RDKit"
 )
+# ============================================================
+# ISOMER EXPLORER - NEW FEATURE
+# ============================================================
+
+st.divider()
+
+st.header("🧪 Isomer Explorer")
+
+st.write(
+    "Compare two molecules and investigate whether "
+    "they are structural isomers."
+)
+
+col1, col2 = st.columns(2)
+
+with col1:
+    smiles_a = st.text_input(
+        "Molecule A — SMILES",
+        value="CCO",
+        key="isomer_a"
+    )
+
+with col2:
+    smiles_b = st.text_input(
+        "Molecule B — SMILES",
+        value="COC",
+        key="isomer_b"
+    )
+
+mol_a = get_molecule(smiles_a)
+mol_b = get_molecule(smiles_b)
+
+if mol_a is None or mol_b is None:
+    st.error("Please enter valid SMILES strings for both molecules.")
+
+else:
+    from rdkit.Chem import rdMolDescriptors, Draw
+
+    formula_a = rdMolDescriptors.CalcMolFormula(mol_a)
+    formula_b = rdMolDescriptors.CalcMolFormula(mol_b)
+
+    canonical_a = Chem.MolToSmiles(
+        mol_a, isomericSmiles=False
+    )
+    canonical_b = Chem.MolToSmiles(
+        mol_b, isomericSmiles=False
+    )
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.subheader("Molecule A")
+        st.image(Draw.MolToImage(mol_a))
+        st.write("Molecular formula:", formula_a)
+
+    with col2:
+        st.subheader("Molecule B")
+        st.image(Draw.MolToImage(mol_b))
+        st.write("Molecular formula:", formula_b)
+
+    st.subheader("Comparison Results")
+
+    if formula_a == formula_b and canonical_a != canonical_b:
+        st.success(
+            "These molecules have the same molecular formula "
+            "but different connectivity. They are candidate "
+            "structural isomers."
+        )
+
+    elif formula_a == formula_b and canonical_a == canonical_b:
+        st.info(
+            "These molecules have the same formula and "
+            "connectivity. They are not different "
+            "constitutional isomers."
+        )
+
+    else:
+        st.warning(
+            "The molecular formulas differ. These molecules "
+            "are not structural isomers of each other."
+        )
