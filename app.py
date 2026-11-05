@@ -1699,7 +1699,7 @@ if page == "🏠 Home":
 
     st.markdown("### 👨‍🏫 Developed by")
     st.markdown("S.P.PRANAVKUMAAR ")
-     st.markdown("EDDIE DENZIL ")
+    st.markdown("EDDIE DENZIL ")
     st.markdown("CYBER SECURITY STUDENTS ")
     st.markdown("Course of Chemistry, School of Sciences  ")
     st.markdown("STUDENT of Engineering and Technology  ")
