@@ -1698,8 +1698,9 @@ if page == "🏠 Home":
     st.divider()
 
     st.markdown("### 👨‍🏫 Developed by")
-    st.markdown("**S.P.PRANAVKUMAAR**")
-    st.markdown("CYBER SECURITY STUDENT ")
+    st.markdown("S.P.PRANAVKUMAAR ")
+     st.markdown("EDDIE DENZIL ")
+    st.markdown("CYBER SECURITY STUDENTS ")
     st.markdown("Course of Chemistry, School of Sciences  ")
     st.markdown("STUDENT of Engineering and Technology  ")
     st.markdown("SRM Institute of Science and Technology, Tiruchirappalli")
